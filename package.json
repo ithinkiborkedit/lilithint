@@ -1,0 +1,25 @@
+{
+  "name": "lilithint",
+  "displayName": "lilithint",
+  "description": "syntax checker for Niftel",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "nif",
+      "aliases": ["Niftel", "nif"],
+      "extensions": [".nif"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "nif",
+      "scopeName": "source.niftel",
+      "path": "./syntaxes/nif.tmLanguage.json"
+    }]
+  }
+}
