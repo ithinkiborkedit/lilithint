@@ -28,5 +28,98 @@
 			]
 		}
 	},
-	"scopeName": "source.niftel"
+{
+  "scopeName": "source.niftel",
+  "name": "Niftel",
+  "patterns": [
+    {
+      "name": "keyword.control.niftel",
+      "match": "\\b(if|else|for|in|while|var|func|return|break|continue|import|as|struct)\\b"
+    },
+    {
+      "name": "storage.type.niftel",
+      "match": "\\bint|float|string|bool|nil|null\\b"
+    },
+    {
+      "name": "constant.language.boolean.niftel",
+      "match": "\\b(true|false)\\b"
+    },
+    {
+      "name": "constant.language.special.niftel",
+      "match": "\\bT\\b"
+    },
+    {
+      "name": "constant.language.null.niftel",
+      "match": "\\b(null|nil)\\b"
+    },
+    {
+      "name": "variable.other.niftel",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+    },
+    {
+      "name": "string.quoted.double.niftel",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.niftel",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.single.niftel",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.niftel",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "constant.numeric.niftel",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    {
+      "name": "keyword.operator.assignment.niftel",
+      "match": "(=|:=|\\+=|-=)"
+    },
+    {
+      "name": "keyword.operator.comparison.niftel",
+      "match": "(==|!=|<=|>=|<|>)"
+    },
+    {
+      "name": "keyword.operator.arithmetic.niftel",
+      "match": "(\\+|\\-|\\*|/|%)"
+    },
+    {
+      "name": "keyword.operator.logical.niftel",
+      "match": "(\\|\\||&&|!|&|\\|)"
+    },
+    {
+      "name": "punctuation.bracket.niftel",
+      "match": "(\\(|\\)|\\[|\\]|\\{|\\})"
+    },
+    {
+      "name": "punctuation.separator.niftel",
+      "match": "(,|:|;|\\.)"
+    },
+    {
+      "name": "keyword.operator.arrow.niftel",
+      "match": "(->)"
+    },
+    {
+      "name": "comment.line.double-slash.niftel",
+      "begin": "//",
+      "end": "$\\n?"
+    },
+    {
+      "name": "comment.block.niftel",
+      "begin": "/\\*",
+      "end": "\\*/"
+    }
+  ]
+}
 }
